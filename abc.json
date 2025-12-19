@@ -1,0 +1,101 @@
+{
+    "doc_desc": {
+      "idno": "DDI_VNM_2023_WBES_v01_M_WB",
+      "producers": [
+        {
+          "name": "Development Data Group",
+          "abbr": "DECDG",
+          "affiliation": "World Bank",
+          "role": "Documentation of the study"
+        }
+      ],
+      "prod_date": "2025-01-23",
+      "version_statement": {
+        "version": "Version 01 (January 2025)"
+      }
+    },
+    "study_desc": {
+      "title_statement": {
+        "idno": "VNM_2023_WBES_v01_M",
+        "title": "World Bank Enterprise Survey 2023",
+        "alternate_title": "WBES 2023"
+      },
+      "authoring_entity": [
+        {
+          "name": "World Bank Group (WBG)",
+          "affiliation": ""
+        }
+      ],
+      "production_statement": {
+        "funding_agencies": [
+          {
+            "name": "World Bank Group",
+            "abbr": "WBG",
+            "role": ""
+          }
+        ]
+      },
+      "distribution_statement": {
+        "contact": [
+          {
+            "name": "Enterprise Analysis Unit",
+            "affiliation": "World Bank Group",
+            "email": "enterprisesurveys@worldbank.org",
+            "uri": ""
+          }
+        ]
+      },
+      "series_statement": {
+        "series_name": "Enterprise Survey [en/oth]",
+        "series_info": "As part of its strategic goal of building a climate for investment, job creation, and sustainable growth, the World Bank has promoted improving business environments as a key strategy for development, which has led to a systematic effort in collecting enterprise data across countries. The Enterprise Surveys are an ongoing World Bank project in collecting both objective data based on firms' experiences and enterprises' perception of the environment in which they operate. \n\nAn Enterprise Survey is a firm-level survey of a representative sample of an economy's private sector. Firm-level surveys have been conducted since 1998 by different units within the World Bank. Since 2005-2006, most data collection efforts have been centralized within the Enterprise Analysis Unit. The Enterprise Surveys are conducted across all geographic regions and cover small, medium, and large companies. The surveys are administered to a representative sample of firms in the non-agricultural formal private economy. Data are used to create indicators that benchmark the quality of the business and investment climate across countries.\n\nThe World Bank Enterprise Surveys (WBES) collect both objective data based on firms’ day-to-day experiences, and perceptions of enterprises regarding the business environment in which they operate. The WBES currently cover over 180,000 firms in 154 countries with a total of 306 surveys since 2006. The WBES are also used to build a panel of enterprise data that will make it possible to track changes in the business environment over time."
+      },
+      "study_info": {
+        "abstract": "The World Bank Enterprise Survey (WBES) is a firm-level survey of a representative sample of an economy's private sector. The surveys cover a broad range of topics related to the business environment including access to finance, corruption, infrastructure, competition, and performance.",
+        "coll_dates": [
+          {
+            "start": "2023-04",
+            "end": "2023-11",
+            "cycle": ""
+          }
+        ],
+        "nation": [
+          {
+            "name": "Viet Nam",
+            "abbreviation": "VNM"
+          }
+        ],
+        "geog_coverage": "National coverage",
+        "analysis_unit": "The primary sampling unit of the study is the establishment. An establishment is a physical location where business is carried out and where industrial operations take place or services are provided. A firm may be composed of one or more establishments. For example, a brewery may have several bottling plants and several establishments for distribution. For the purposes of this survey an establishment must make its own financial decisions and have its own financial statements separate from those of the firm. An establishment must also have its own management and control over its payroll.",
+        "universe": "The universe of inference includes all formal (i.e., registered) private sector businesses (with at least 1% private ownership) and with at least five employees. In terms of sectoral criteria, all manufacturing businesses (ISIC Rev 4. codes 10-33) are eligible; for services businesses, those corresponding to the ISIC Rev 4 codes 41-43, 45-47, 49-53, 55-56, 58, 61-62, 69-75, 79, and 95 are included in the Enterprise Surveys. Cooperatives and collectives are excluded from the Enterprise Surveys. All eligible establishments must be registered with the registration agency. In the case of Viet Nam, the listing from the General Statistics Office of Vietnam, the 2021 Economic Census, was used. The registration agency is the Department of Planning and investment.",
+        "data_kind": "Sample survey data [ssd]",
+        "notes": "The 2023 Viet Nam World Bank Enterprise Survey covered the following topics:\n- General information of a firm/ establishment\n- Infrastructure and services\n- Sales and supplies\n- Commercial disputes\n- Management practices\n- Degree of competition\n- Innovation\n- Capacity\n- Land and permits\n- Green economy\n- Finance\n- Business-Government relations\n- Labor\n- Business environment\n- Performance"
+      },
+      "method": {
+        "data_collection": {
+          "sampling_procedure": "The WBES use stratified random sampling, where the population of establishments is first separated into non-overlapping groups, called strata, and then respondents are selected through simple random sampling from each stratum. The detailed methodology is provided in the Sampling Note (https://www.enterprisesurveys.org/content/dam/enterprisesurveys/documents/methodology/Sampling_Note-Consolidated-2-16-22.pdf). Stratified random sampling has several advantages over simple random sampling. In particular, it:\n\n- produces unbiased estimates of the whole population or universe of inference, as well as at the levels of stratification\n- ensures representativeness by including observations in all of those categories\n- produces more precise estimates for a given sample size or budget allocation, and\n- may reduce implementation costs by splitting the population into convenient subdivisions.\n\nThe WBES typically use three levels of stratification: industry classification, establishment size, and subnational region (used in combination). Starting in 2022, the WBES bases the industry classification on ISIC Rev. 4 (with earlier surveys using ISIC Rev. 3.1). For regional coverage within a country, the WBES has national coverage.\n\nNote: Refer to Sampling Structure section in \"The Viet Nam 2023 World Bank Enterprise Survey Implementation Report\" for detailed methodology on sampling.",
+          "coll_mode": [
+            "Face-to-face [f2f]"
+          ],
+          "research_instrument": "The standard WBES questionnaire covers several topics regarding the business environment and business performance. These topics include general firm characteristics, infrastructure, sales and supplies, management practices, competition, innovation, capacity, land and permits, finance, business-government relations, exposure to bribery, labor, and performance. Information about the general structure of the questionnaire is available in the Enterprise Surveys Manual and Guide (https://www.enterprisesurveys.org/content/dam/enterprisesurveys/documents/methodology/Enterprise-Surveys-Manual-and-Guide.pdf).\n\nThe questionnaire implemented in the Viet Nam 2023 WBES included additional questions tailored for the Business Ready Report covering infrastructure, trade, government regulations, finance, labor, and other topics.",
+          "coll_situation": "Detailed information on the WBES methodology and data collection is provided in the Enterprise Surveys Manual and Guide (https://www.enterprisesurveys.org/content/dam/enterprisesurveys/documents/methodology/Enterprise-Surveys-Manual-and-Guide.pdf). The interviews for the Viet Nam 2023 WBES were conducted between April 2023 and November 2023. The interviews were conducted in the following languages: Vietnamese and English.\n\nThe fieldwork for the Viet Nam 2023 WBES was implemented by Mekong Economics LTD.",
+          "weight": "Since the WBES uses stratified random sampling, individual observations should be properly weighted when making inferences about the population, since unweighted estimates are biased unless sample sizes are proportional to the size of each stratum. For each WBES, special care is given to correctly compute sampling weights. Whenever the Universe is used to draw the sample (i.e., Sampling Frame is the same as the Universe) it is imperative to accurately adjust the universe within each stratum to account for the presence of ineligible establishments (e.g., the firm discontinued businesses, or is deemed ineligible due to its business activity or having fewer than five employees). Proper treatment of panel establishments is also crucial. Details about how the WBES sampling weights are calculated are given in the Sampling Note section of \"The Viet Nam 2023 World Bank Enterprise Survey Implementation Report\".\n\nThree versions of sampling weights are calculated, depending on the assumptions that determine eligibility of establishments to be counted towards the WBES universe."
+        },
+        "method_notes": "The WBES datafiles are organized in ways that reflect the corresponding questionnaire. The variables that are standard across countries have the first letter in their name correspond to the questionnaire section where the variable belongs in the questionnaire, i.e., a1 denotes section A. All variables are numeric with the exception of those variables with an “x” at the end of their names. The suffix “x” denotes that the variable is alpha-numeric.\n\nThe WBES datafiles contain two establishment identifiers, idstd and id. The former is a global unique identifier of each establishment, while the latter is unique identifier within each survey. The variable idstd can be used to match the WBES establishment one-to-one across databases. The variables wweak, wmedian, and wstrong corresponding to sampling weights based on, respectively, weak, median, and strong assumptions about eligibility (see Section III.6 of \"The Viet Nam 2023 World Bank Enterprise Survey Implementation Report\"). The variable strata corresponds to the stratum of each observation.\n\nAdditionally, the WBES datafiles contain many standard variables. The variable d1a2_v4 denotes the main activity of the establishment, as obtained during the WBES interview, coded in the four-digit ISIC Rev. 4. Users should note that this activity may differ from the industry classification given in the Sampling Frame, a4a. Users are generally advised to use industry categories based on the realized information in d1a2_v4. Additional sampling information is contained in variables a2 (region) and a6a (size). The variable panel identifies panel establishments, i.e., those that participated in the Viet Nam 2023 WBES. The combination of a4a, a2, a6a, and panel forms stratum of each establishment, which is contained in variable strata.\n\nThe last complete fiscal year for each establishment is contained in variables a20m (last month of last complete fiscal year) and a20y (last complete fiscal year).\n\nNote that when an entry in the WBES database is empty, this means that the question was not asked to the corresponding respondent. This happens when the question is deemed inapplicable, due to skip patterns or other reasons. In cases when the question was posed, some entry is provided, including don't know, which is an example of item non-response.",
+        "analysis_info": {
+          "response_rate": "Overall survey response rate was 31.7%."
+        }
+      },
+      "data_access": {
+        "dataset_use": {
+          "cit_req": "The World Bank Group. Viet Nam - World Bank Enterprise Survey (WBES) 2023, Ref. VNM_2023_WBES_v01_M. Dataset downloaded from https://www.enterprisesurveys.org/en/data on [date].",
+          "disclaimer": "The user of the data acknowledges that the original collector of the data, the authorized distributor of the data, and the relevant funding agency bear no responsibility for use of the data or for interpretations or inferences based upon such uses."
+        }
+      }
+    },
+    "schematype": "survey",
+    "tags": [
+      {
+        "tag": "NODOI"
+      }
+    ]
+  }
