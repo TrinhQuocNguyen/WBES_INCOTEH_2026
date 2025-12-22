@@ -1,6 +1,6 @@
 import pandas as pd
 
-# Load the CSV file (replace 'vietnam_2023_modified.csv' with your actual file path if needed)
+# Load the CSV file 
 df = pd.read_csv('vietnam_2023_modified.csv')
 
 # Function to extract the value for a given indicator in a specific group
