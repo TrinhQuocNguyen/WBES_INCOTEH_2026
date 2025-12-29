@@ -76,6 +76,8 @@ $ python get_data_overview.py
 - Apply Pearson correlation across segments
 - Generate full correlation matrix
 
+<b>Run these commands for analysis: </b>
+
 ```bash
 $ python analyze_data.py
 $ python cal_corr_t_statistics.py
