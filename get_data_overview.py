@@ -1,6 +1,5 @@
 """
-Generate Figure 1: Distribution of Surveyed Firms by Size Category
-For Section 3.1 Data Source
+Get the overall dataset statistics and create aFigure showing
 """
 
 import pandas as pd
@@ -9,7 +8,7 @@ import numpy as np
 
 # Load data
 print("Loading data...")
-data = pd.read_csv('vietnam_data_clean.csv')
+data = pd.read_csv('data/vietnam_data_clean.csv')
 
 # Replace '.' with NaN and convert to numeric
 data['value'] = data['value'].replace('.', np.nan)
@@ -50,31 +49,16 @@ for cat, count, pct in zip(size_categories, firm_counts, percentages):
     print(f"  {cat.replace(chr(10), ' ')}: {count:>3} firms ({pct:>5.1f}%)")
 
 # Create figure
-fig, (ax2) = plt.subplots(1, 2, figsize=(14, 6))
+fig, (ax) = plt.subplots(figsize=(14, 6))
 fig.suptitle('Percentage Distribution of Surveyed Firms by Size Category', 
              fontsize=14, fontweight='bold', y=0.98)
 
-# # Subplot 1: Bar chart
+# Subplot: Pie chart
 colors = ['#3498db', '#2ecc71', '#e74c3c']
-# bars = ax1.bar(size_categories, firm_counts, color=colors, edgecolor='black', linewidth=1.5)
-# ax1.set_ylabel('Number of Firms', fontsize=11)
-# ax1.set_xlabel('Firm Size Category', fontsize=11)
-# ax1.set_title('(a) Absolute Numbers', fontsize=11)
-# ax1.grid(axis='y', alpha=0.3, linestyle='--')
-# ax1.set_ylim(0, max(firm_counts) * 1.15)
-
-# # Add value labels on bars
-# for bar, count, pct in zip(bars, firm_counts, percentages):
-#     height = bar.get_height()
-#     ax1.text(bar.get_x() + bar.get_width()/2., height,
-#              f'{count}\n({pct:.1f}%)',
-#              ha='center', va='bottom', fontsize=10, fontweight='bold')
-
-# Subplot 2: Pie chart
-ax2.pie(firm_counts, labels=size_categories, autopct='%1.1f%%',
+ax.pie(firm_counts, labels=size_categories, autopct='%1.1f%%',
         colors=colors, startangle=90, textprops={'fontsize': 11},
         wedgeprops={'edgecolor': 'black', 'linewidth': 1.5})
-# ax2.set_title('(b) Percentage Distribution', fontsize=11)
+# ax.set_title('(b) Percentage Distribution', fontsize=11)
 
 # Add summary text box
 summary_text = (
@@ -88,8 +72,8 @@ fig.text(0.5, 0.02, summary_text, ha='center', fontsize=9,
          bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.3))
 
 plt.tight_layout(rect=[0, 0.06, 1, 0.96])
-plt.savefig('figure1_firm_distribution.png', dpi=300, bbox_inches='tight')
-print("\n✓ Figure saved as 'figure1_firm_distribution.png'")
+plt.savefig('figures/firm_distribution.png', dpi=300, bbox_inches='tight')
+print("\n✓ Figure saved as 'figures/firm_distribution.png'")
 plt.show()
 
 # Additional dataset statistics
@@ -129,5 +113,5 @@ print("\n" + "="*60)
 print("ANALYSIS COMPLETE")
 print("="*60)
 print("\nOutput files:")
-print("  - figure1_firm_distribution.png (for paper)")
+print("  - figures/firm_distribution.png (for paper)")
 print("\nThis figure can be inserted into Section 3.1 of the paper.")

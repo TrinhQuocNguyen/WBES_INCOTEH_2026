@@ -36,13 +36,13 @@ Output files:
 
 # METHOD 1: If we have the pivoted CSV already
 try:
-    pivoted = pd.read_csv('Pivoted_Data.csv')
+    pivoted = pd.read_csv('data/Pivoted_Data.csv')
     print("Loaded pivoted data from CSV")
 except FileNotFoundError:
-    print("Pivoted_Data.csv not found. Creating from raw data...")
+    print("✅ data/Pivoted_Data.csv not found. Creating from raw data...")
     
     # METHOD 2: Create from raw data
-    data = pd.read_csv('vietnam_data_clean.csv')
+    data = pd.read_csv('data/vietnam_data_clean.csv')
     
     # Replace '.' with NaN and convert value to numeric
     data['value'] = data['value'].replace('.', np.nan)
@@ -66,8 +66,8 @@ except FileNotFoundError:
     pivoted = pivoted.dropna(how='all', subset=corr_indicators)
     
     # Save for future use
-    pivoted.to_csv('Pivoted_Data.csv', index=False)
-    print("Created and saved Pivoted_Data.csv")
+    pivoted.to_csv('data/Pivoted_Data.csv', index=False)
+    print("✅ Created and saved Pivoted_Data.csv")
 
 # Define the 10 indicators
 corr_indicators = ['t5', 't7', 't9', 'perf1', 'perf2', 'perf3', 
@@ -90,8 +90,8 @@ indicator_names = {
 # Calculate correlation matrix
 corr_matrix = pivoted[corr_indicators].corr()
 
-print(f"\nNumber of segments (observations): {len(pivoted)}")
-print(f"Number of indicators: {len(corr_indicators)}")
+print(f"\n✅ Number of segments (observations): {len(pivoted)}")
+print(f"✅ Number of indicators: {len(corr_indicators)}")
 
 # Function to calculate t-statistic for correlation
 def calculate_t_statistic(r, n):
@@ -230,10 +230,6 @@ key_relationships = [
 
 # Calculate statistics for each relationship
 for ind1, ind2, description in key_relationships:
-    # r = corr_matrix.loc[ind1, ind2]
-    # t = calculate_t_statistic(r, n)
-    # p = get_p_value(t, df)
-    # sig = get_significance(p)
     
     # Get strength and significance description
     r = corr_matrix.loc[ind1, ind2]
@@ -298,7 +294,7 @@ print("  - Weak: |r| ≤ 0.30")
 print("="*150)
 
 # Export to Excel with formatting
-with pd.ExcelWriter('Table4_Correlation_Significance.xlsx', engine='openpyxl') as writer:
+with pd.ExcelWriter('data/analyzed_results/Table4_Correlation_Significance.xlsx', engine='openpyxl') as writer:
     results_df_display.to_excel(writer, sheet_name='Significance Table', index=False)
     
     # Get the worksheet to adjust column widths
@@ -347,12 +343,12 @@ with pd.ExcelWriter('Table4_Correlation_Significance.xlsx', engine='openpyxl') a
     for row_num in range(notes_row + 1, notes_row + 9):
         worksheet.merge_cells(f'A{row_num}:F{row_num}')
     
-print("\n✓ Table exported to: Table4_Correlation_Significance.xlsx")
+print("\n✅ Table exported to: data/analyzed_results/Table4_Correlation_Significance.xlsx")
 print("  (Includes strength categories and interpretations)")
 
 # Create a simplified version for paper (without interpretation column)
 results_paper = results_df_display.drop('Interpretation', axis=1)
-with pd.ExcelWriter('Table4_For_Paper.xlsx', engine='openpyxl') as writer:
+with pd.ExcelWriter('data/analyzed_results/Table4_For_Paper.xlsx', engine='openpyxl') as writer:
     results_paper.to_excel(writer, sheet_name='Table 4', index=False)
     
     # Get the worksheet to adjust column widths
@@ -390,7 +386,7 @@ with pd.ExcelWriter('Table4_For_Paper.xlsx', engine='openpyxl') as writer:
             cell.border = thin_border
             cell.alignment = Alignment(vertical='center')
 
-print("✓ Paper-ready version exported to: Table4_For_Paper.xlsx")
+print("✅  Paper-ready version exported to: data/analyzed_results/Table4_For_Paper.xlsx")
 print("  (Compact format without interpretations for publication)")
 
 # Optional: Create a more detailed analysis of ALL correlations
@@ -425,8 +421,8 @@ detailed_df = pd.DataFrame(detailed_results)
 detailed_df = detailed_df.sort_values('t', key=abs, ascending=False)
 
 # Export detailed analysis
-detailed_df.to_excel('All_Correlations_Detailed.xlsx', index=False)
-print(f"\n✓ Detailed analysis of all {len(detailed_df)} correlation pairs exported to:")
+detailed_df.to_excel('data/analyzed_results/All_Correlations_Detailed.xlsx', index=False)
+print(f"\n✅  Detailed analysis of all {len(detailed_df)} correlation pairs exported to:")
 print("  All_Correlations_Detailed.xlsx")
 
 # Summary statistics
@@ -468,7 +464,7 @@ print("\n" + "="*150)
 print("ANALYSIS COMPLETE!")
 print("="*150)
 print("\nFiles created:")
-print("1. Table4_Correlation_Significance.xlsx - Full table with interpretations")
-print("2. Table4_For_Paper.xlsx - Compact version for publication")
-print("3. All_Correlations_Detailed.xlsx - Complete analysis of all correlation pairs")
+print("1. data/analyzed_results/Table4_Correlation_Significance.xlsx - Full table with interpretations")
+print("2. data/analyzed_results/Table4_For_Paper.xlsx - Compact version for publication")
+print("3. data/analyzed_results/All_Correlations_Detailed.xlsx - Complete analysis of all correlation pairs")
 print("="*150)
