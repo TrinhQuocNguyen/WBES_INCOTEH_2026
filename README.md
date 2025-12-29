@@ -7,7 +7,6 @@
 - ❤️Our project page: XXX
 - ❤️Paper: XXX
 
-
 **[2025/XX/XX: Good News!]** ![new](https://img.alicdn.com/imgextra/i4/O1CN01kUiDtl1HVxN6G56vN_!!6000000000764-2-tps-43-19.png)    
 
 * Our paper XXX.
@@ -18,7 +17,7 @@
 
 ---
 
-### Data analysis for the conference
+### Data analysis for the paper
 
 - Full data with indicator explaination: https://datacatalog.worldbank.org/search/dataset/0037947/enterprise-surveys
 - Download the "STATA file", and put it into the "data" directory.
@@ -37,7 +36,7 @@ seaborn = 0.12.2
 ```
 
 ## 2. Analysis Pipeline
-![Analysis Pipeline](figures\pipeline.png)
+![Analysis Pipeline](figures/pipeline.png)
 
 ### Stage 1: Data Preparation and Cleaning
 
@@ -58,7 +57,7 @@ $ python prepare_data.py
 ```bash
 $ python get_data_overview.py
 ```
-![Data Overview](figures\firm_distribution.png)
+![Data Overview](figures/firm_distribution.png)
 
 ### Stage 2: Group-Level Metric Extraction
 - Define firm groups using survey categories
@@ -82,7 +81,7 @@ $ python analyze_data.py
 $ python cal_correlation_significance.py
 ```
 
-![Correlation Heatmap](figures\correlation_heatmap.png)
+![Correlation Heatmap](figures/correlation_heatmap.png)
 
 ### Stage 4: Statistical Validation
 - Use standard errors and sample sizes
